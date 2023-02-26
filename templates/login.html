@@ -1,0 +1,30 @@
+<header>
+    {% include '_partials/header.html' %}
+</header>
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Iniciar sesión</h2>
+                {% if error %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Nombre de usuario:</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    <a href="{% url 'registro' %}" class="btn btn-secondary">¿No tienes una cuenta? Crea una.</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

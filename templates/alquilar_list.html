@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alquiler List</title>
+</head>
+<body>
+<header>
+    {% include '_partials/header.html' %}
+</header>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Matrícula</th>
+            <th>Nombre del cliente</th>
+            <th>Fecha de Devolución</th>
+            <th>Fecha de Inicio</th>
+            <th>Tarifa diaria</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for alquiler in alquileres %}
+            <tr>
+                <td>{{ alquiler.coche.matricula }} </td>
+                <td>{{ alquiler.cliente.nombre }}</td>
+                <td>{{ alquiler.fecha_fin }}</td>
+                <td>{{ alquiler.fecha_inicio }}</td>
+                <td>{{ alquiler.coche.tarifa_diaria }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

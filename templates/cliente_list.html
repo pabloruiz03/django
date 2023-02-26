@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+    {% include '_partials/header.html' %}
+</header>
+<div class="container mt-5">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>DNI</th>
+            <th>nombre</th>
+            <th>dirección</th>
+            <th>Número de telefono</th>
+            <th>Correo electronico</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for client in clientes %}
+            <tr>
+                <td>{{ client.dni }}</td>
+                <td>{{ client.nombre }}</td>
+                <td>{{ client.apellido }}</td>
+                <td>{{ client.telefono }}</td>
+                <td>{{ client.email }}</td>
+                <td>
+                    <a href="{% url 'editar_cliente' client.dni %}" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{% url 'borrar_cliente' client.dni %}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

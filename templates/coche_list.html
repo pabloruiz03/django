@@ -1,0 +1,26 @@
+{% include '_partials/header.html' %}
+{% block content %}
+    <div class="card-group">
+        {% for coche in coches %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ coche.matricula }}</h5>
+                        <p class="card-text">
+                            <br>Marca: {{ coche.marca }}
+                            <br>Modelo: {{ coche.modelo }}
+                            <br>año: {{ coche.año }}
+                            <br>tarifa diaria: {{ coche.tarifa_diaria }}€
+                        <p>
+                            <a href="{% url 'editar_coche' coche.matricula %}" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="{% url 'borrar_coche' coche.matricula %}"
+                               class="btn btn-danger btn-sm">Eliminar</a>
+                        </p>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

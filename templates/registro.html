@@ -1,0 +1,25 @@
+<header>
+    {% include '_partials/header.html' %}
+</header>
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2>Crear cuenta</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre">
+        </div>
+        <div class="form-group">
+          <label for="correo_electronico">Correo electrónico:</label>
+          <input type="email" class="form-control" id="correo_electronico" name="correo_electronico">
+        </div>
+        <button type="submit" class="btn btn-primary">Crear cuenta</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

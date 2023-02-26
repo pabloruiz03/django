@@ -1,0 +1,22 @@
+{% include '_partials/header.html' %}
+<div class="container">
+  <h2>Alquileres de {{ customer.nombre }}</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Coche</th>
+        <th>Fecha de Alquiler</th>
+        <th>Fecha de Devolución</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for rental in rentals %}
+      <tr>
+        <td>{{ rental.car.make }} {{ rental.car.model }}</td>
+        <td>{{ rental.start_date }}</td>
+        <td>{{ rental.end_date }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
