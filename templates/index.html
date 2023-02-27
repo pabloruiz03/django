@@ -4,81 +4,67 @@
 <body>
 <header>
     {% include '_partials/header.html' %}
+    {% load static %}
 </header>
-<div class="container w-50 mt-5">
-
- <div class="container my-5">
-    <div class="container mt-5">
-        <h1 class="text-center mb-5">Bienvenidos a la web de Alquiler de Coches</h1>
-        <p class="lead">La empresa líder en alquiler de vehículos en todo el país. Aquí en Alquiler de Coches,
-            entendemos las necesidades de movilidad de nuestros clientes y es por eso que ofrecemos una amplia gama de
-            vehículos de alquiler para satisfacer sus necesidades. Ya sea que necesite un coche para un viaje de
-            negocios, un viaje en familia o simplemente para disfrutar de un día libre, tenemos el vehículo perfecto
-            para usted.</p>
-        <p class="lead">Nuestra flota de vehículos incluye una amplia variedad de modelos, desde pequeños coches
-            compactos hasta vehículos más grandes y espaciosos para viajes en familia. Todos nuestros vehículos son de
-            alta calidad y están bien mantenidos, para garantizar la seguridad y comodidad de nuestros clientes. Además,
-            todos nuestros vehículos vienen con una amplia gama de características, como aire acondicionado, GPS y
-            sistemas de seguridad avanzados, para que pueda viajar con comodidad y tranquilidad.</p>
-        <p class="lead">En Alquiler de Coches, nos esforzamos por brindar un servicio excepcional a nuestros clientes.
-            Nuestro equipo de atención al cliente está altamente capacitado y es amable y eficiente, para ayudarlo con
-            cualquier problema o preocupación que pueda
-            <ten></ten>
-            er durante su alquiler. Además, ofrecemos descuentos y
-            promociones atractivas a nuestros clientes para fomentar la lealtad y mantenerlos interesados
-        </p>
-        <h2>Ubicación estratégica</h2>
-        <p class="lead">Nuestra ubicación estratégica es accesible tanto para los clientes como para los empleados, y
-            está situada
-            cerca de puntos de interés populares, como aeropuertos, estaciones de tren y hoteles. Esto significa que
-            puede recoger su vehículo de alquiler con facilidad y comenzar su viaje sin retrasos innecesarios.</p>
-
-        <h2>Precios competitivos y flexibles</h2>
-        <p class="lead">
-            Ofrecemos un servicio de alquiler de vehículos de alta calidad a precios
-            competitivos. Con una amplia gama de vehículos, un equipo de atención
-            al cliente dedicado y precios asequibles, estamos seguros de que
-            encontrará el alquiler perfecto para sus necesidades.
-        </p>
-        <p class="lead">
-            Además, ofrecemos una amplia variedad de opciones de pago, incluyendo
-            tarjetas de crédito y débito, para que pueda realizar su reserva de
-            manera rápida y fácil.
-        </p>
-        <p class="lead">
-            Para hacer una reserva, simplemente visite nuestra página web y
-            seleccione el modelo de coche que desea alquilar. Puede elegir el
-            período de alquiler que desee y ver los precios disponibles en tiempo
-            real. Luego, puede completar el proceso de reserva en línea en pocos
-            minutos. También puede llamarnos directamente y hablar con uno de
-            nuestros agentes para hacer su reserva o para obtener más información
-            sobre nuestros servicios.
-        </p>
-        <p class="lead">
-            Tenemos una tarifa que se ajuste a sus necesidades y presupuesto.
-            Además, ofrecemos tarifas reducidas para alquileres a largo plazo y
-            descuentos para clientes frecuentes, para que pueda ahorrar aún más en
-            sus viajes.
-        </p>
-        <p class="lead">
-            Tenemos una tarifa que se ajuste a sus necesidades y presupuesto. Además, ofrecemos tarifas reducidas para
-            alquileres a largo plazo y descuentos para clientes frecuentes, para que pueda ahorrar aún más en sus
-            viajes.
-        </p>
-        <p class="lead">
-            En resumen, en Alquiler de Coches, ofrecemos un servicio de alquiler de vehículos de alta calidad a precios
-            competitivos. Con una amplia gama de vehículos, un equipo de atención al cliente dedicado y precios
-            asequibles, estamos seguros de que encontrará el alquiler perfecto para sus necesidades. Además, ofrecemos
-            una amplia variedad de opciones de pago, incluyendo tarjetas de crédito y débito, para que pueda realizar su
-            reserva de manera rápida y fácil.
-        </p>
-        <p class="lead">
-            Para hacer una reserva, simplemente visite nuestra página web y seleccione el modelo de coche que desea
-            alquilar. Puede elegir el período de alquiler que desee y ver los precios disponibles en tiempo real. Luego,
-            puede completar el proceso de reserva en línea en pocos minutos. También puede llamarnos directamente y
-            hablar con uno de nuestros agentes para hacer su reserva o para obtener más información sobre nuestros
-            servicios.
-        </p>
+<div class="container">
+    <h1>Índice del Concesionario de Coches</h1>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>1. Introducción</h3>
+            <p class="lead">La empresa líder en alquiler de vehículos en todo el país. Aquí en Alquiler de Coches,
+                entendemos las necesidades de movilidad de nuestros clientes y es por eso que ofrecemos una amplia gama
+                de
+                vehículos de alquiler para satisfacer sus necesidades. Ya sea que necesite un coche para un viaje de
+                negocios, un viaje en familia o simplemente para disfrutar de un día libre, tenemos el vehículo perfecto
+                para usted.</p></div>
+        <div class="col-sm-6">
+            <img src="{% static 'vehicity/img/coche1.jpg' %}" class="img-fluid">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>2. Historia del Concesionario</h3>
+            <p class="lead">Nuestra flota de vehículos incluye una amplia variedad de modelos, desde pequeños coches
+                compactos hasta vehículos más grandes y espaciosos para viajes en familia. Todos nuestros vehículos son
+                de
+                alta calidad y están bien mantenidos, para garantizar la seguridad y comodidad de nuestros clientes.
+                Además,
+                todos nuestros vehículos vienen con una amplia gama de características, como aire acondicionado, GPS y
+                sistemas de seguridad avanzados, para que pueda viajar con comodidad y tranquilidad.</p></div>
+        <div class="col-sm-6">
+            <img src="{% static 'vehicity/img/coche2.jpg' %}" class="img-fluid">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>3. Selección de Coches</h3>
+            <p class="lead">En Alquiler de Coches, nos esforzamos por brindar un servicio excepcional a nuestros
+                clientes.
+                Nuestro equipo de atención al cliente está altamente capacitado y es amable y eficiente, para ayudarlo
+                con
+                cualquier problema o preocupación que pueda tener durante su alquiler. Además, ofrecemos descuentos y
+                promociones atractivas a nuestros clientes para fomentar la lealtad y mantenerlos interesados
+            </p></div>
+        <div class="col-sm-6">
+            <img src="{% static 'vehicity/img/coche3.jpg' %}" class="img-fluid">
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Ubicación estratégica</h3>
+            <p class="lead">Nuestra ubicación estratégica es accesible tanto para los clientes como para los empleados,
+                y
+                está situada
+                cerca de puntos de interés populares, como aeropuertos, estaciones de tren y hoteles. Esto significa que
+                puede recoger su vehículo de alquiler con facilidad y comenzar su viaje sin retrasos innecesarios.</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="{% static 'vehicity/img/coche4.jpg' %}" class="img-fluid">
+        </div>
     </div>
 </div>
 </body>

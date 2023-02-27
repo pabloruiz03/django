@@ -33,14 +33,12 @@ class CocheForm(forms.ModelForm):
 class AlquilerForm(forms.ModelForm):
     class Meta:
         model = Alquiler
-        fields = ['cliente', 'coche', 'fecha_inicio', 'fecha_fin', 'dni_cliente', 'matricula_coche']
+        fields = ['cliente', 'coche', 'fecha_inicio', 'fecha_fin']
         widgets = {
             'cliente': forms.Select(attrs={'class': 'form-control'}),
             'coche': forms.Select(attrs={'class': 'form-control'}),
             'fecha_inicio': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
             'fecha_fin': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
-            'dni_cliente': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese el DNI del cliente'}),
-            'matricula_coche': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ingrese la matrícula del coche'}),
         }
 
 class UsuarioForm(forms.ModelForm):
