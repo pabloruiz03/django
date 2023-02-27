@@ -21,6 +21,5 @@ urlpatterns = [
     path('', views.iniciar_sesion, name='login'),
     path('registro', views.registrar_usuario, name='registro'),
     path('', include('vehicity.urls')),
-    path('sobre_nosotros', views.sobre_nosotros)
 
 ]

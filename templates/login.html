@@ -1,8 +1,10 @@
-<header>
-    {% include '_partials/header.html' %}
-</header>
+{% include '_partials/head.html' %}
+{% load static %}
 
 {% block content %}
+    <figure><img class="mx-auto d-block"  src="{% static 'vehicity/img/1page-header-img.jpg' %}"></figure>
+    <ul class="top-menu">
+    </ul>
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">

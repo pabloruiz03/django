@@ -22,7 +22,9 @@ def agregar_cliente(request):
     if request.method == 'POST':
         form = ClienteForm(request.POST)
         if form.is_valid():
-            cliente = form.save(commit=False)
+            data = form.cleaned_data
+            cliente = Cliente(dni=data['dni'], nombre=data['nombre'], apellido=data['apellido'], email=data['email'],
+                              telefono=data['telefono'])
             cliente.save()
             return redirect('listar_clientes')
     else:
