@@ -50,7 +50,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href={% url 'index' %} id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href={% url 'index' %} id="navbarDropdownMenuLink"
+                           data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                             Clientes
                         </a>
@@ -78,6 +79,10 @@
                             <a class="dropdown-item" href={% url 'agregar_alquiler' %}>Añadir Alquiler</a>
                             <a class="dropdown-item" href={% url 'listar_alquileres' %}>Ver Todos los Alquileres</a>
                         </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href={% url 'sobre_nosotros' %}>Sobre Nosotros</a>
+                    </li>
                     </li>
                 </ul>
             </div>

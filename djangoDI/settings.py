@@ -50,6 +50,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangoDI.urls'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+ALLOWED_HOSTS = ['.concesionarioteis.northeurope.cloudapp.azure.com/', '20.234.86.28']
+ALLOWED_HOSTS = ['your_server_domain_or_IP', 'second_domain_or_IP', . . ., 'localhost']
 
 TEMPLATES = [
     {
@@ -112,6 +114,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
