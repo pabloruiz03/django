@@ -50,8 +50,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangoDI.urls'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-ALLOWED_HOSTS = ['.concesionarioteis.northeurope.cloudapp.azure.com/', '20.234.86.28']
-
+ALLOWED_HOSTS = ['.concesionarioteis.northeurope.cloudapp.azure.com', '20.234.86.28']
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
